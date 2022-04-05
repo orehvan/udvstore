@@ -142,3 +142,5 @@ replay_pid*
 .designer
 
 # End of https://www.toptal.com/developers/gitignore/api/vaadin,java,intellij
+
+HELP.md
