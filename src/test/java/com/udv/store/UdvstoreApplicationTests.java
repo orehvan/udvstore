@@ -1,4 +1,4 @@
-package com.springwebapp.udvstore;
+package com.udv.store;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
