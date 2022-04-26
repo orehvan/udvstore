@@ -1,6 +1,6 @@
 package Database;
 
-import Models.User;
+import com.udv.store.models.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
