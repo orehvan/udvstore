@@ -1,13 +1,9 @@
 package Models;
 
-import com.vaadin.flow.component.template.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-@Document
+
 public class User {
-   @Id
     Long id;
     UserRoles userRoles;
     Integer balance;
