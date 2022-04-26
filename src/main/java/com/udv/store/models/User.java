@@ -1,7 +1,12 @@
 package com.udv.store.models;
 
+import com.vaadin.flow.component.template.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class User
 {
+    @Id
     private long id;
     private UserRoles userRoles;
     private int balance;
