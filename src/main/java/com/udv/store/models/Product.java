@@ -1,26 +1,54 @@
 package com.udv.store.models;
 
-import java.awt.*;
+import com.vaadin.flow.component.template.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+@Document
 public class Product
 {
+    @Id
+    private final Long id;
     private ProductSize productSize;
-    private final Image image;
+    public String img;
     private final String name;
     private final int price;
 
-    public Product(ProductSize productSize, Image image, String name, int price)
-    {
+    public Product(Long id, ProductSize productSize, String path, String name, int price) throws IOException {
+        this.id = id;
         this.productSize = productSize;
-        this.image = image;
+        this.img = path;
         this.name = name;
         this.price = price;
     }
 
-    public Product(Image image, String name, int price)
-    {
-        this.image = image;
+    public Product(Long id, String path, String name, int price) throws IOException {
+        this.id = id;
+        this.img = path;
         this.name = name;
         this.price = price;
+    }
+
+    public ProductSize getProductSize() {
+        return productSize;
+    }
+
+    public void setProductSize(ProductSize productSize) {
+        this.productSize = productSize;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }
