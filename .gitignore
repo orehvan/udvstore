@@ -124,6 +124,9 @@ fabric.properties
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Node modules
+node_modules
+
 # Package Files #
 *.jar
 *.war
