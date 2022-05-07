@@ -3,6 +3,7 @@ package com.udv.store.views;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.router.Route;
 
 /**
  * A Designer generated component for the main-view template.
@@ -12,6 +13,7 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
  */
 @Tag("main-view")
 @JsModule("./main-view.ts")
+@Route("huyna")
 public class MainView extends LitTemplate {
 
     /**
