@@ -13,7 +13,6 @@ import com.vaadin.flow.router.Route;
  */
 @Tag("main-view")
 @JsModule("./main-view.ts")
-@Route("huyna")
 public class MainView extends LitTemplate {
 
     /**

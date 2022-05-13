@@ -1,5 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/form-layout/src/vaadin-form-layout.js';
+import './header-view';
 
 @customElement('main-view')
 export class MainView extends LitElement {
@@ -14,7 +14,7 @@ export class MainView extends LitElement {
 
   render() {
     return html`
-<vaadin-form-layout style="width: 100%; height: 100%;"></vaadin-form-layout>
+<header-view></header-view>
 `;
   }
 

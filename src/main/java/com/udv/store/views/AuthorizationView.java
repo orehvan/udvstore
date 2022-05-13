@@ -15,11 +15,8 @@ import com.vaadin.flow.router.Route;
  */
 @Tag("authorization-view")
 @JsModule("./authorization-view.ts")
-@Route("")
 public class AuthorizationView extends LitTemplate {
 
-    @Id("logo")
-    private Image logo = new Image("logos\\loginLogo.png", "LoginLogo");
 
     /**
      * Creates a new AuthorizationView.

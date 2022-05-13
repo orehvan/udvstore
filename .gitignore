@@ -143,4 +143,5 @@ replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/vaadin,java,intellij
 
-HELP.md
+#Node modules
+node_modules
