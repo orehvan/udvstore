@@ -11,10 +11,12 @@ import com.vaadin.flow.router.Route;
 
 @Route("login")
 @PageTitle("Вход | UDV Store")
-public class LoginView extends VerticalLayout implements BeforeEnterObserver {
+public class LoginView extends VerticalLayout implements BeforeEnterObserver
+{
     private final LoginForm login = new LoginForm();
 
-    public LoginView() {
+    public LoginView()
+    {
         addClassName("login-view");
         setSizeFull();
         setAlignItems(Alignment.CENTER);
@@ -28,7 +30,8 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
         );
     }
 
-    private void configureLoginForm() {
+    private void configureLoginForm()
+    {
         var i18n = LoginI18n.createDefault();
         var i18nForm = i18n.getForm();
         i18nForm.setTitle("Добро пожаловать!");
@@ -47,7 +50,8 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
         login.setAction("login");
     }
 
-    private Image createLogoImg() {
+    private Image createLogoImg()
+    {
         var logo = new Image();
         logo.setSrc("img/logos/loginLogo.png");
         logo.setAlt("UDV Store");
@@ -57,11 +61,13 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
     }
 
     @Override
-    public void beforeEnter(BeforeEnterEvent beforeEnterEvent) {
-        if(beforeEnterEvent.getLocation()
+    public void beforeEnter(BeforeEnterEvent beforeEnterEvent)
+    {
+        if (beforeEnterEvent.getLocation()
                 .getQueryParameters()
                 .getParameters()
-                .containsKey("error")) {
+                .containsKey("error"))
+        {
             login.setError(true);
         }
     }
