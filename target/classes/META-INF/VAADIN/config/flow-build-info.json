@@ -1,5 +1,5 @@
 {
-  "productionMode": true,
+  "productionMode": false,
   "useDeprecatedV14Bootstrapping": false,
   "eagerServerLoad": false,
   "chunks": {
@@ -58,6 +58,7 @@
         "./vaadin-big-decimal-field.js",
         "@vaadin/custom-field/src/vaadin-custom-field.js",
         "@vaadin/avatar/src/vaadin-avatar.js",
+        "@vaadin/button/src/vaadin-button.js",
         "@vaadin/app-layout/src/vaadin-drawer-toggle.js",
         "@vaadin/accordion/src/vaadin-accordion.js",
         "@vaadin/text-area/src/vaadin-text-area.js",

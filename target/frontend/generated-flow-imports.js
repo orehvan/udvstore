@@ -4,7 +4,6 @@ export const addCssBlock = function(block, before = false) {
  document.head[before ? 'insertBefore' : 'appendChild'](tpl.content, document.head.firstChild);
 };
 
-import '@vaadin/button/theme/lumo/vaadin-button.js';
 import '@vaadin/common-frontend/ConnectionIndicator.js';
 import '@vaadin/context-menu/theme/lumo/vaadin-context-menu.js';
 import '@vaadin/flow-frontend/contextMenuConnector.js';

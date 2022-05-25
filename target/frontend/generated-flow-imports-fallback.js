@@ -10,6 +10,7 @@ import '@vaadin/app-layout/theme/lumo/vaadin-app-layout.js';
 import '@vaadin/app-layout/theme/lumo/vaadin-drawer-toggle.js';
 import '@vaadin/avatar-group/theme/lumo/vaadin-avatar-group.js';
 import '@vaadin/avatar/theme/lumo/vaadin-avatar.js';
+import '@vaadin/button/theme/lumo/vaadin-button.js';
 import '@vaadin/checkbox-group/theme/lumo/vaadin-checkbox-group.js';
 import '@vaadin/checkbox/theme/lumo/vaadin-checkbox.js';
 import '@vaadin/combo-box/theme/lumo/vaadin-combo-box.js';

@@ -20,7 +20,6 @@ public class Header extends HorizontalLayout
     public Header()
     {
         addClassName("header");
-        setMargin(true);
         setHeight("5%");
         setWidthFull();
         setAlignItems(Alignment.CENTER);

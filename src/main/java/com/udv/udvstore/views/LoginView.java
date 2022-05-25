@@ -1,5 +1,6 @@
 package com.udv.udvstore.views;
 
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginI18n;
@@ -8,6 +9,7 @@ import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.lumo.Lumo;
 
 @Route("login")
 @PageTitle("Вход | UDV Store")
@@ -21,6 +23,8 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver
         setSizeFull();
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
+        UI.getCurrent().getElement().getThemeList().add(Lumo.DARK);
+
 
         configureLoginForm();
 
