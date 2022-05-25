@@ -2,25 +2,11 @@
   "productionMode": false,
   "useDeprecatedV14Bootstrapping": false,
   "eagerServerLoad": false,
-  "npmFolder": "C:\\Users\\warsd\\IdeaProjects\\udvstore",
-  "node.version": "v16.15.0",
-  "node.download.root": "https://nodejs.org/dist/",
-  "generatedFolder": "C:\\Users\\warsd\\IdeaProjects\\udvstore\\target\\frontend",
-  "frontendFolder": "C:\\Users\\warsd\\IdeaProjects\\udvstore\\frontend",
-  "connect.javaSourceFolder": "C:\\Users\\warsd\\IdeaProjects\\udvstore\\src\\main\\java",
-  "javaResourceFolder": "C:\\Users\\warsd\\IdeaProjects\\udvstore\\src\\main\\resources",
-  "connect.applicationProperties": "C:\\Users\\warsd\\IdeaProjects\\udvstore\\src\\main\\resources\\application.properties",
-  "connect.openApiFile": "C:\\Users\\warsd\\IdeaProjects\\udvstore\\target\\generated-resources\\openapi.json",
-  "project.frontend.generated": "C:\\Users\\warsd\\IdeaProjects\\udvstore\\frontend\\generated",
-  "pnpm.enable": false,
-  "require.home.node": false,
-  "build.folder": "target",
   "chunks": {
     "fallback": {
       "jsModules": [
         "@polymer/iron-icon/iron-icon.js",
         "@vaadin/select/src/vaadin-select.js",
-        "@vaadin/polymer-legacy-adapter/template-renderer.js",
         "./selectConnector.js",
         "./lit-renderer.ts",
         "@vaadin/time-picker/src/vaadin-time-picker.js",
@@ -31,7 +17,6 @@
         "@vaadin/grid/src/vaadin-grid-column.js",
         "@vaadin/grid/src/vaadin-grid-sorter.js",
         "@vaadin/checkbox/src/vaadin-checkbox.js",
-        "./flow-component-renderer.js",
         "./gridConnector.js",
         "@vaadin/grid/src/vaadin-grid-tree-toggle.js",
         "./dndConnector-es6.js",
@@ -45,7 +30,6 @@
         "@vaadin/date-time-picker/src/vaadin-date-time-picker.js",
         "./vaadin-grid-flow-selection-column.js",
         "@vaadin/scroller/vaadin-scroller.js",
-        "@vaadin/context-menu/src/vaadin-context-menu.js",
         "@vaadin/avatar-group/src/vaadin-avatar-group.js",
         "@vaadin/radio-group/src/vaadin-radio-button.js",
         "@vaadin/message-input/src/vaadin-message-input.js",
@@ -61,8 +45,6 @@
         "./ironListStyles.js",
         "@vaadin/tabs/src/vaadin-tabs.js",
         "@vaadin/checkbox-group/src/vaadin-checkbox-group.js",
-        "./menubarConnector.js",
-        "@vaadin/menu-bar/src/vaadin-menu-bar.js",
         "@vaadin/combo-box/src/vaadin-combo-box.js",
         "./comboBoxConnector.js",
         "@vaadin/upload/src/vaadin-upload-file.js",
@@ -76,10 +58,9 @@
         "./vaadin-big-decimal-field.js",
         "@vaadin/custom-field/src/vaadin-custom-field.js",
         "@vaadin/avatar/src/vaadin-avatar.js",
+        "@vaadin/button/src/vaadin-button.js",
         "@vaadin/app-layout/src/vaadin-drawer-toggle.js",
         "@vaadin/accordion/src/vaadin-accordion.js",
-        "./contextMenuConnector.js",
-        "./contextMenuTargetConnector.js",
         "@vaadin/text-area/src/vaadin-text-area.js",
         "@vaadin/tabs/src/vaadin-tab.js",
         "@vaadin/app-layout/src/vaadin-app-layout.js"
@@ -88,5 +69,6 @@
         
       ]
     }
-  }
+  },
+  "enableDevServer": false
 }

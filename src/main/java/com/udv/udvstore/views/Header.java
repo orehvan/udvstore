@@ -1,61 +1,65 @@
 package com.udv.udvstore.views;
 
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.menubar.MenuBar;
+import com.vaadin.flow.component.menubar.MenuBarVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
-@Route("")
-public class Header extends HorizontalLayout {
-    public Header() {
+@Route("header")
+public class Header extends HorizontalLayout
+{
+    Image logo = new Image();
+    TextField searchText = new TextField();
+    MenuBar menuBar = new MenuBar();
+
+    public Header()
+    {
         addClassName("header");
+        setHeight("5%");
+        setWidthFull();
+        setAlignItems(Alignment.CENTER);
+
+        configureLogoImg();
+        configureSearchText();
+        configureMenuBar();
 
         add(
-                createLogoImg(),
-                createSearch(),
-                createButton(VaadinIcon.QUESTION_CIRCLE.create(), "FAQ"),
-                createButton(VaadinIcon.COIN_PILES.create(), "Баланс"),
-                createButton(VaadinIcon.CART.create(), "Корзина")
+                logo,
+                searchText,
+                menuBar
         );
     }
 
-    private MenuBar createMenuBar() {
-        var menuBar = new MenuBar();
-        menuBar.addItem(createButton(VaadinIcon.QUESTION_CIRCLE.create(), "FAQ"));
-        menuBar.addItem(createButton(VaadinIcon.COIN_PILES.create(), "Баланс"));
-        menuBar.addItem(createButton(VaadinIcon.CART.create(), "Корзина"));
-        setWidth("25%");
-
-        return menuBar;
+    private void configureMenuBar()
+    {
+        menuBar.addThemeVariants(MenuBarVariant.LUMO_ICON);
+        createButton(VaadinIcon.QUESTION_CIRCLE.create(), "FAQ");
+        createButton(VaadinIcon.COIN_PILES.create(), "Баланс");
+        createButton(VaadinIcon.CART.create(), "Корзина");
     }
 
-    private Image createLogoImg() {
-        var logo = new Image();
+    private void configureLogoImg()
+    {
         logo.setSrc("img/logos/loginLogo.png");
         logo.setAlt("UDV Store");
-
-        return logo;
+        logo.setHeightFull();
     }
 
-    private TextField createSearch() {
-        var search = new TextField();
-        search.setPlaceholder("Поиск");
-        search.setPrefixComponent(VaadinIcon.SEARCH.create());
-        setWidth("50%");
-
-        return search;
+    private void configureSearchText()
+    {
+        searchText.setPlaceholder("Поиск");
+        searchText.setPrefixComponent(VaadinIcon.SEARCH.create());
+        searchText.setWidthFull();
     }
 
-    private Button createButton(Component icon, String text) {
-        var button = new Button();
-        button.setIcon(icon);
-        button.setText(text);
-
-        return button;
+    private void createButton(Component icon, String text)
+    {
+        var button = menuBar.addItem(icon, menuItemClickEvent -> {});
+        button.add(new Text(text));
     }
 }

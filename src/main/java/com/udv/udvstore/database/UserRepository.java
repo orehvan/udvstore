@@ -1,6 +1,6 @@
-package com.udv.store.database;
+package com.udv.udvstore.database;
 
-import com.udv.store.models.User;
+import com.udv.udvstore.models.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

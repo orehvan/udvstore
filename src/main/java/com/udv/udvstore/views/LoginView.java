@@ -1,5 +1,6 @@
 package com.udv.udvstore.views;
 
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginI18n;
@@ -8,17 +9,22 @@ import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.lumo.Lumo;
 
 @Route("login")
 @PageTitle("Вход | UDV Store")
-public class LoginView extends VerticalLayout implements BeforeEnterObserver {
+public class LoginView extends VerticalLayout implements BeforeEnterObserver
+{
     private final LoginForm login = new LoginForm();
 
-    public LoginView() {
+    public LoginView()
+    {
         addClassName("login-view");
         setSizeFull();
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
+        UI.getCurrent().getElement().getThemeList().add(Lumo.DARK);
+
 
         configureLoginForm();
 
@@ -28,7 +34,8 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
         );
     }
 
-    private void configureLoginForm() {
+    private void configureLoginForm()
+    {
         var i18n = LoginI18n.createDefault();
         var i18nForm = i18n.getForm();
         i18nForm.setTitle("Добро пожаловать!");
@@ -47,7 +54,8 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
         login.setAction("login");
     }
 
-    private Image createLogoImg() {
+    private Image createLogoImg()
+    {
         var logo = new Image();
         logo.setSrc("img/logos/loginLogo.png");
         logo.setAlt("UDV Store");
@@ -57,11 +65,13 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
     }
 
     @Override
-    public void beforeEnter(BeforeEnterEvent beforeEnterEvent) {
-        if(beforeEnterEvent.getLocation()
+    public void beforeEnter(BeforeEnterEvent beforeEnterEvent)
+    {
+        if (beforeEnterEvent.getLocation()
                 .getQueryParameters()
                 .getParameters()
-                .containsKey("error")) {
+                .containsKey("error"))
+        {
             login.setError(true);
         }
     }

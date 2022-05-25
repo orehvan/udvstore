@@ -1,8 +1,8 @@
 package com.udv.udvstore;
 
-import com.udv.udvstore.database.*;
-import com.udv.udvstore.models.*;
-import com.udv.udvstore.models.*;
+import com.udv.udvstore.database.ProductRepository;
+import com.udv.udvstore.models.Product;
+import com.udv.udvstore.models.ProductSize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

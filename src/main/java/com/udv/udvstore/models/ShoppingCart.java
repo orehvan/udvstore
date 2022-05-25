@@ -1,4 +1,4 @@
-package com.udv.store.models;
+package com.udv.udvstore.models;
 
 import java.util.HashMap;
 

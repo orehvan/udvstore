@@ -1,4 +1,4 @@
-package com.udv.store.models;
+package com.udv.udvstore.models;
 
 import com.vaadin.flow.component.template.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

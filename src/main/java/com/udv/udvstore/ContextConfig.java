@@ -1,4 +1,4 @@
-package com.udv.store;
+package com.udv.udvstore;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
