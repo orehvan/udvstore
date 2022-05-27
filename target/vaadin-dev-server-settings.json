@@ -1,7 +1,7 @@
 {
   "frontendFolder": "C:/Users/Jealsey/Documents/GitHub/udvstore/frontend",
   "themeFolder": "themes",
-  "themeResourceFolder": "C:/Users/Jealsey/Documents/GitHub/udvstore/target/flow-frontend",
+  "themeResourceFolder": "C:/Users/Jealsey/Documents/GitHub/udvstore/target/frontend",
   "staticOutput": "C:/Users/Jealsey/Documents/GitHub/udvstore/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
   "generatedFolder": "generated",
   "frontendBundleOutput": "C:\\Users\\Jealsey\\Documents\\GitHub\\udvstore\\target\\classes\\META-INF\\VAADIN\\webapp",

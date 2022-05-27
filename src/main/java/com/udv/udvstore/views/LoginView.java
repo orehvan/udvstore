@@ -25,7 +25,6 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver
         setJustifyContentMode(JustifyContentMode.CENTER);
         UI.getCurrent().getElement().getThemeList().add(Lumo.DARK);
 
-
         configureLoginForm();
 
         add(

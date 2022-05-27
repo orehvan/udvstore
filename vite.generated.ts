@@ -5,7 +5,7 @@
  * This file will be overwritten on every run. Any custom changes should be made to vite.config.ts
  */
 import path from 'path';
-import { existsSync, readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import * as net from 'net';
 
 import { processThemeResources } from './target/plugins/application-theme-plugin/theme-handle';
@@ -23,7 +23,6 @@ const frontendFolder = path.resolve(__dirname, settings.frontendFolder);
 const themeFolder = path.resolve(frontendFolder, settings.themeFolder);
 const frontendBundleFolder = path.resolve(__dirname, settings.frontendBundleOutput);
 const addonFrontendFolder = path.resolve(__dirname, settings.addonFrontendFolder);
-const themeResourceFolder = path.resolve(__dirname, settings.themeResourceFolder);
 
 const projectStaticAssetsFolders = [
   path.resolve(__dirname, 'src', 'main', 'resources', 'META-INF', 'resources'),
@@ -38,7 +37,7 @@ const themeOptions = {
   devMode: false,
   // The following matches folder 'target/flow-frontend/themes/'
   // (not 'frontend/themes') for theme in JAR that is copied there
-  themeResourceFolder: path.resolve(themeResourceFolder, settings.themeFolder),
+  themeResourceFolder: path.resolve(__dirname, settings.themeResourceFolder),
   themeProjectFolders: themeProjectFolders,
   projectStaticAssetsOutputFolder: path.resolve(__dirname, settings.staticOutput),
   frontendGeneratedFolder: path.resolve(frontendFolder, settings.generatedFolder)
@@ -312,16 +311,10 @@ export const vaadinConfig: UserConfigFn = (env) => {
     root: 'frontend',
     base: '',
     resolve: {
-      alias: [
-        { find: 'themes', replacement: (importee: string) => {
-            if (existsSync(path.resolve(themeResourceFolder, importee))) {
-              return path.resolve(themeResourceFolder, settings.themeFolder);
-            }
-            return themeFolder;
-          }
-        },
-        { find: 'Frontend', replacement: frontendFolder }
-      ],
+      alias: {
+        themes: themeFolder,
+        Frontend: frontendFolder
+      },
       preserveSymlinks: true
     },
     define: {
@@ -346,11 +339,7 @@ export const vaadinConfig: UserConfigFn = (env) => {
         // Pre-scan entrypoints in Vite to avoid reloading on first open
         'generated/vaadin.ts'
       ],
-      exclude: [
-        '@vaadin/router',
-        '@vaadin/vaadin-license-checker',
-        '@vaadin/vaadin-usage-statistics',
-      ]
+      exclude: ['@vaadin/router']
     },
     plugins: [
       !devMode && brotli(),
