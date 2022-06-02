@@ -1,11 +1,4 @@
-com\udv\udvstore\database\ProductRepository.class
-com\udv\udvstore\models\ShoppingCart.class
-com\udv\udvstore\models\UserRoles.class
 com\udv\udvstore\views\Header.class
-com\udv\udvstore\models\Product.class
-com\udv\udvstore\models\User.class
 com\udv\udvstore\views\LoginView.class
 com\udv\udvstore\views\MainView.class
 com\udv\udvstore\UdvstoreApplication.class
-com\udv\udvstore\database\UserRepository.class
-com\udv\udvstore\models\ProductSize.class

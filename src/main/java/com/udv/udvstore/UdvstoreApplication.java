@@ -1,23 +1,16 @@
 package com.udv.udvstore;
 
-import com.udv.udvstore.database.daos.ProductDao;
+import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class UdvstoreApplication {
-    final
-    ProductDao productDao;
-
-    public UdvstoreApplication(ProductDao productDao)
-    {
-        this.productDao = productDao;
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(UdvstoreApplication.class, args);
-
-
     }
 
 }

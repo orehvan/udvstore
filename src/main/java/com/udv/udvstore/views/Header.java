@@ -1,4 +1,4 @@
-package com.udv.udvstore.views.components;
+package com.udv.udvstore.views;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Text;
@@ -10,6 +10,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
+@Route("header")
 public class Header extends HorizontalLayout
 {
     Image logo = new Image();
