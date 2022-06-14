@@ -15,7 +15,7 @@
 	<description>udvstore</description>
 	<properties>
 		<java.version>18</java.version>
-		<vaadin.version>23.0.7</vaadin.version>
+		<vaadin.version>23.0.9</vaadin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -70,6 +70,11 @@
 			<groupId>com.vaadin</groupId>
 			<artifactId>license-checker</artifactId>
 			<version>1.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-board-flow</artifactId>
+			<version>${vaadin.version}</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>

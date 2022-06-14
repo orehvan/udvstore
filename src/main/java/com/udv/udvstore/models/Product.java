@@ -3,36 +3,49 @@ package com.udv.udvstore.models;
 import com.vaadin.flow.component.template.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 @Document
 public class Product
 {
     @Id
-    private final Long id;
+    private Long id;
     private ProductSize productSize;
     public String img;
-    private final String name;
-    private final int price;
+    private String name;
+    private int price;
 
-    public Product(Long id, ProductSize productSize, String path, String name, int price) throws IOException {
-        this.id = id;
-        this.productSize = productSize;
-        this.img = path;
-        this.name = name;
-        this.price = price;
+    public Product()
+    {
     }
 
-    public Product(Long id, String path, String name, int price) throws IOException {
+    public Long getId()
+    {
+        return id;
+    }
+
+    public void setId(Long id)
+    {
         this.id = id;
-        this.img = path;
+    }
+
+    public String getImg()
+    {
+        return img;
+    }
+
+    public void setImg(String img)
+    {
+        this.img = img;
+    }
+
+    public void setName(String name)
+    {
         this.name = name;
+    }
+
+    public void setPrice(int price)
+    {
         this.price = price;
     }
 
@@ -51,4 +64,6 @@ public class Product
     public int getPrice() {
         return price;
     }
+
+
 }

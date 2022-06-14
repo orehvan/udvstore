@@ -145,3 +145,9 @@ replay_pid*
 
 #Node modules
 node_modules
+
+#idea files
+.idea
+
+#Target dir
+target
